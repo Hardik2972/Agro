@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Agro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_login">Register Now</string>
+    <string name="logInView1">You\'ll receive an SMS shortly with the verification code</string>
+    <string name="register_head">Registration</string>
+    <string name="textView2">Already have an account?</string>
+    <string name="textView5">Login now</string>
+    <string name="signup">Signup now</string>
+    <string name="button_registration">Login Now</string>
+    <string name="login_head">Login</string>
+    <string name="question">Don\'t have an account?</string>
+    <string name="upload_head">Enter your details</string>
+    <string name="button_details">Submit</string>
+    <string name="editTextName">Enter your name</string>
+    <string name="editTextPhone">Enter your phone number</string>
+    <string name="logout">Sign out</string>
+    <string name="edit_text">Edit profile</string>
+    <string name="editText">Enter your phone number</string>
+    <string name="phone_no">Enter your phone number</string>
+</resources>

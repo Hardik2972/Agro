@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "895912665631",
+    "project_id": "agro-2972",
+    "storage_bucket": "agro-2972.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895912665631:android:a9c3b72958b232f24deb2a",
+        "android_client_info": {
+          "package_name": "com.hardikgarg.agro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895912665631-1cs0bs3g9c0pk5r0dnvj9iapq9cchrt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvwRtWZ1r75C_YkZFmkBBXfDknGYu72pQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895912665631-1cs0bs3g9c0pk5r0dnvj9iapq9cchrt7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
