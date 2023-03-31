@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -22,10 +25,64 @@ public class You extends AppCompatActivity {
     TextView p;
     TextView s;
     Button b;
+    Button editProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you);
+        BottomNavigationView bnv=findViewById(R.id.bottomNavigationView);
+        bnv.setSelectedItemId(R.id.you);
+
+        bnv.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.home:
+                        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+                        String userid1 = user1.getUid();
+                        DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("users");
+                        reference1.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
+                                if(cropFromDb.equals("Tomato")){
+                                    startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
+                                    finish();
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+                        return true;
+                    case R.id.your_crop:
+                        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        String userid = user.getUid();
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("users");
+                        reference.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                String stateFromDb=snapshot.child(userid).child("state").getValue(String.class);
+                                Intent intent=new Intent(getApplicationContext(),cropDetails.class);
+                                intent.putExtra("state",stateFromDb);
+                                startActivity(intent);
+                                finish();
+                            }
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                            }
+                        });
+                        return true;
+                    case R.id.you:
+                        return true;
+                }
+                return false;
+            }
+        });
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userid=user.getUid();
         DatabaseReference reference= FirebaseDatabase.getInstance().getReference().child("users");
@@ -67,7 +124,17 @@ public class You extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent=new Intent(You.this,LogInActivity.class);
                 startActivity(intent);
+                finish();
 
+            }
+        });
+        editProfile=findViewById(R.id.edit_text);
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(You.this,editProfileActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

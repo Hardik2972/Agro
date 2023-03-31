@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    app:cardCornerRadius="4dp"
-    app:cardBackgroundColor="#5C5B5B"
+    app:cardCornerRadius="50dp"
+    app:cardBackgroundColor="#FFFFFF"
     android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="125dp"
             android:id="@+id/idIVNews"
             android:scaleType="center"/>
         <TextView
@@ -19,23 +19,24 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/idIVNews"
             android:text="Android heading"
+            android:textAlignment="center"
             android:id="@+id/idTVNewsHeading"
-            android:textColor="#CDDC39"
+            android:textColor="#3F51B6"
             android:padding="3dp"
             android:textSize="18sp"
             android:maxLines="2"
             android:textStyle="bold"
             android:layout_margin="3dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/idTVNewsHeading"
-            android:id="@+id/idTVSubTitle"
-            android:maxLines="3"
-            android:text="Sub Heading"
-            android:layout_margin="3dp"
-            android:padding="3dp"
-            android:textColor="#FFFFFF"/>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/idTVNewsHeading"-->
+<!--            android:id="@+id/idTVSubTitle"-->
+<!--            android:maxLines="3"-->
+<!--            android:text="Sub Heading"-->
+<!--            android:layout_margin="3dp"-->
+<!--            android:padding="3dp"-->
+<!--            android:textColor="#FFFFFF"/>-->
 
 
 

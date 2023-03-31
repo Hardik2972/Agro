@@ -44,7 +44,7 @@ public class UploadNotice extends AppCompatActivity {
     private StorageReference storageReference;
     String value;
 
-    String[] state={"Delhi","Assam","West Bengal","Odisha","Andhra Pradesh","Telangana","Tamil Nadu","Kerala","Maharashtra","Punjab","Haryana","Himachal Pradesh","Jammu and Kashmir","Uttarakhand","Uttar pradesh","Northwestern"};
+    String[] state={"Assam","West Bengal","Odisha","Andhra Pradesh","Telangana","Tamil Nadu","Kerala","Maharashtra","Punjab","Haryana","Himachal Pradesh","Jammu and Kashmir","Uttar Pradesh","Karnatka","Gujarat","Goa","Pondicherry","Madhya Pradesh","Chattisgarh","Bihar","Tripura","Arunachal Pradesh","Sikkim","Nagaland","Meghalaya","Manipur","Rajasthan"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,8 +79,10 @@ public class UploadNotice extends AppCompatActivity {
                     phone.requestFocus();
                 }else{
                     uploadData();
-//                    Intent iHome=new Intent(UploadNotice.this,MainActivity.class);
-//                    startActivity(iHome);
+                    Intent iHome=new Intent(UploadNotice.this,cropDetails.class);
+                    iHome.putExtra("s",value);
+                    startActivity(iHome);
+                    finish();
                 }
 
             }
@@ -91,6 +93,10 @@ public class UploadNotice extends AppCompatActivity {
         String kName=name.getText().toString();
         String kPhone=phone.getText().toString();
         String state=value;
+        String crop="none";
+        String cropDate="12";
+        String cropMonth="12";
+        String cropYear="2003";
         // ***********************************************calender for date*****************************************************
         Calendar calForDate= Calendar.getInstance();
         SimpleDateFormat currentDate=new SimpleDateFormat("dd-MM-yy");
@@ -102,12 +108,11 @@ public class UploadNotice extends AppCompatActivity {
         //**************************************************get uid from authentication of firebase********************************************
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userid=user.getUid();
-        NoticeData noticeData=new NoticeData(kName,date,time,userid,state,kPhone);
+        NoticeData noticeData=new NoticeData(kName,date,time,userid,state,kPhone,crop,cropDate,cropMonth,cropYear);
         reference.child(userid).setValue(noticeData).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(UploadNotice.this, "Data added successfully", Toast.LENGTH_SHORT).show();
-                finish();
+                //Toast.makeText(UploadNotice.this, "Data added successfully", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

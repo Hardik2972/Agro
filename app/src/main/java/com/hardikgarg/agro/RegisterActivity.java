@@ -17,7 +17,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText editTextEmail, editTextPassword;
@@ -31,9 +35,24 @@ public class RegisterActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            Intent iHome=new Intent(RegisterActivity.this,MainActivity.class);
-            startActivity(iHome);
-            finish();
+            FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+            String userid1 = user1.getUid();
+            DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("users");
+            reference1.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
+                    if(cropFromDb.equals("Tomato")){
+                        startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
+                        finish();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
     }
     @Override

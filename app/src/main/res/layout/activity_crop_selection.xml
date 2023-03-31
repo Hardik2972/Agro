@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CropSelection">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/selectCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="@string/selectCrop"/>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iV1"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/bell" />
+
+                    <ImageView
+                        android:id="@+id/iV2"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/sunflower" />
+
+                    <ImageView
+                        android:id="@+id/iV3"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/tea" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iV4"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/garlic" />
+
+                    <ImageView
+                        android:id="@+id/iV5"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/ginger"  />
+
+                    <ImageView
+                        android:id="@+id/iV6"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/tomato" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iV7"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/lettuce" />
+
+                    <ImageView
+                        android:id="@+id/iV8"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/broccoli" />
+
+                    <ImageView
+                        android:id="@+id/iV9"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/coffee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iV10"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/lavendar"/>
+                    <ImageView
+                        android:id="@+id/iV11"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/sugarcane"/>
+                    <ImageView
+                        android:id="@+id/iV12"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/white"  />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

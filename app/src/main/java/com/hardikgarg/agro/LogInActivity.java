@@ -18,9 +18,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class LogInActivity extends AppCompatActivity {
     TextView v1;
@@ -36,9 +37,23 @@ public class LogInActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser!=null){
-        Intent iHome=new Intent(LogInActivity.this,MainActivity.class);
-        startActivity(iHome);
-        finish();
+            FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+            String userid1 = user1.getUid();
+            DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("users");
+            reference1.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
+
+                        startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
+                        finish();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
     }
     @Override
@@ -52,6 +67,7 @@ public class LogInActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent ilogin=new Intent(LogInActivity.this,RegisterActivity.class);
                 startActivity(ilogin);
+                finish();
 
             }
         });
@@ -84,9 +100,25 @@ public class LogInActivity extends AppCompatActivity {
 
                                 if (task.isSuccessful()) {
                                     Toast.makeText(LogInActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                    Intent ijulu=new Intent(LogInActivity.this,MainActivity.class);
-                                    startActivity(ijulu);
-                                    finish();
+                                    FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+                                    String userid1 = user1.getUid();
+                                    DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("users");
+                                    reference1.addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
+
+                                                startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
+                                                finish();
+
+
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                        }
+                                    });
                                     // Sign in success, update UI with the signed-in user's information
 //                                    Log.d(TAG, "signInWithEmail:success");
 //                                    FirebaseUser user = mAuth.getCurrentUser();

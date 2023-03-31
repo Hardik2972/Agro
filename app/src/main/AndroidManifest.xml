@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +16,93 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Agro"
         tools:targetApi="31">
+        <activity
+            android:name=".SunflowerMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SugarcaneMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeaMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LettuceMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LavendarMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GingerMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoffeeMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BroccoliMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BellMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GarlicMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TomatoMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CropChoose"
+            android:exported="false" />
+        <activity
+            android:name=".YourCropActivity"
+            android:exported="false" />
+        <activity
+            android:name=".editProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Weather"
+            android:exported="false" />
+        <activity
+            android:name=".Tomato"
+            android:exported="false" />
+        <activity
+            android:name=".Sunflower"
+            android:exported="false" />
+        <activity
+            android:name=".Broccoli"
+            android:exported="false" />
+        <activity
+            android:name=".Garlic"
+            android:exported="false" />
+        <activity
+            android:name=".Ginger"
+            android:exported="false" />
+        <activity
+            android:name=".Lettuce"
+            android:exported="false" />
+        <activity
+            android:name=".Lavendar"
+            android:exported="false" />
+        <activity
+            android:name=".Coffee"
+            android:exported="false" />
+        <activity
+            android:name=".Tea"
+            android:exported="false" />
+        <activity
+            android:name=".Sugarcane"
+            android:exported="false" />
+        <activity
+            android:name=".Bell"
+            android:exported="false" />
+        <activity
+            android:name=".cropDetails"
+            android:exported="false" />
+        <activity
+            android:name=".CropSelection"
+            android:exported="false" />
+        <activity
+            android:name=".NewsActivity"
+            android:exported="false" />
         <activity
             android:name=".You"
             android:exported="false" />

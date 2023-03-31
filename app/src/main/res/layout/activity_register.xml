@@ -30,7 +30,7 @@
         android:drawableLeft="@drawable/baseline_shield_24"
         android:drawablePadding="10sp"
         android:ems="10"
-        android:hint="Create a Password"
+        android:hint="Enter your Id password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

@@ -19,4 +19,23 @@
     <string name="edit_text">Edit profile</string>
     <string name="editText">Enter your phone number</string>
     <string name="phone_no">Enter your phone number</string>
+    <string name="selectCrop">Select your crop</string>
+    <string name="idTV4weeksDesc">Ideal soil and weather condition for your crop</string>
+    <string name="idTV1Expand"><br><b>Ideal Soil\n</b></br><br>• Light soil is preferable.\n</br><br>• Good drainage, good porosity and bulk density.\n</br><br>• Slightly acidic nature , rich in organic carbon content and with high humus level\n</br><br><b>Ideal Weather\n</b></br><br>• Daytime temp(20-30°C) .\n</br><br>• Nighttime temp(10-15°C) .\n</br><br>• Ideally,warm,humid weather .\n</br></string>
+    <string name="idTV2Expand"><br>• Apply 8-10 tons per acre of farmyard manure during field preparation.\n</br><br>• Apply 42kg per acre of urea 52kg per acre of DAP and 33kg of per acre of MOP 2 0r 3 days before transplanting.\n</br></string>
+    <string name="idTV3Expand"><br>• plow the landwith soil turning and harrow 3-5 times to obtain a fine and loose tilth.Pepare the deal against the slope in oeder to improve soil drainage .\n</br></string>
+
+    <string name="idTV4Expand"><br>• Seeds can be treated 24hr before sowing with antimicrobial or tungicidal powders or solutions e.g.-Trichoderma viride(4g-10g) per kg seed .\n</br><br>• Against fungal diseases: solutions containing thiram,captan or mancozeb (2.5g/kg seed) .\n</br><br>• Against Sucking insects: imidacloprid 600FS (5ml/kg seed) .\n</br></string>
+    <string name="idTV5Expand"><br>1) Soak good quality seeds in warm water to soften them and speed germination.\n</br><br>2) While seeds are drying use a wooden teeth bars to mark seedbed soil 5cm apart and 0.5cm deep.\n</br><br>3) Dry seeds thoroughly and put 2-3 seeds per hole in seeded soil.\n</br><br>4) Cover the seeds lightly with soil from bed.\n</br><br>5) Water reasonably , add organic mulch if at hand to keep soil moist and at constant temperature.\n</br></string>
+    <string name="idTV6Expand"><br>• Now irrigate the soil timely with sufficient water and remove unwanted weeds, add fertilizers and manures and pesticide if required.\n</br></string>
+    <string name="idTV7Expand"><br>• Apply fertilizer pellete in the furrow and work them into soil.\n</br><br>• Do Irrigation if no rain expected to mix or embed fertilizer in soil deeply.\n</br><br>• Plan a foliar spray containing beran for e.g.borax(4g/l).\n</br><br>• In zinc deficient soil must be sure to apply Zinc for e.g.-zinc sulphate(5g/l).\n</br></string>
+    <string name="idTV8Expand"><br>• Monitor your field for infected plants and post, and remove them and use pesticides accordingly\n</br></string>
+    <string name="idTV9Expand"><br>• Fruits are picked normally at an interval of 4-5 days in summer and weekly intervals for winter.\n</br><br>• Harvesting is done with help of bulk pins.\n</br><br>• Fruits are packed into wide,shallow,stackable boxes. If they are already mature to avoid compression damage.\n</br><br>• Tomato should be picked during coolest part of day to avoid bruicins during picking process.\n</br></string>
+    <string name="idTV10Expand"><br>• Storage room temp (15-20°C) (short term).\n</br><br>• Storage room temp (13°C) (long term).\n</br><br>• Good ventilation\n</br><br>• Efficient use of space.\n</br><br>• Good hygienic conditions.\n</br></string>
+    <string name="idTV12Expand"><br>• All crop waste after harvest to avoid possible reintroduction of a disease  in same field .In case of pests,plow the land with soil turning to exposure the insect to predators and solar radiations.\n</br></string>
+    <string name="idTTVTime"><br><b>Time</b></br><br>: 60 to 100 days.\n</br></string>
+    <string name="idTTVClimate"><br><b>Climate</b></br><br>: warm and humid weather.\n</br><br>Daytime temp (20-30°C) \n</br><br>Night temp (10-15°C) \n</br></string>
+    <string name="idTTVSoil"><br><b>Soil</b></br><br>: Well drained,sandy or red loam soil rich in organic matter.\n</br></string>
+    <string name="idTTVPrice"><br><b>Price</b></br><br>: 1600/qtl around.\n</br></string>
+    <string name="idTTVDesc"><br><b>Why it is preferable?\n</b></br><br>It is preferable because it price is more than 6 times of average agricultural price value in India. It has a global and growing market.</br></string>
 </resources>
