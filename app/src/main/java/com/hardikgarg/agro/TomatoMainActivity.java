@@ -49,25 +49,25 @@ public class TomatoMainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.home:
-                        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
-                        String userid1 = user1.getUid();
-                        DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("users");
-                        reference1.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
-                                if(cropFromDb.equals("Tomato")){
-                                    startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
-                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
-                                    finish();
-                                }
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
+//                        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+//                        String userid1 = user1.getUid();
+//                        DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("users");
+//                        reference1.addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
+//                                if(cropFromDb.equals("Tomato")){
+//                                    startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
+//                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+//                                    finish();
+//                                }
+//                            }
+//
+//                            @Override
+//                            public void onCancelled(@NonNull DatabaseError error) {
+//
+//                            }
+//                        });
                         return true;
                     case R.id.your_crop:
 

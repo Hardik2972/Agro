@@ -50,62 +50,62 @@ public class update_adapter extends RecyclerView.Adapter<myviewholder> {
             public void onClick(View view) {
                 if(temp1.getHeader().equals("Bell Pepper")){
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, BellMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Sugarcane")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, SugarcaneMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
 
                 }
                 else if (temp1.getHeader().equals("Tea")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, TeaMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Coffee")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, CoffeeMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Lavendar")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, LavendarMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Lettuce")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, LettuceMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Ginger")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, GingerMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Garlic")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, GarlicMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Broccoli")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, BroccoliMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
                 else if (temp1.getHeader().equals("Sunflower")) {
                     update(temp1.getHeader());
-                    Intent intent=new Intent(context, TomatoMainActivity.class);
+                    Intent intent=new Intent(context, SunflowerMainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }

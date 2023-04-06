@@ -1,9 +1,691 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BroccoliMainActivity">
+    <ImageView
+        android:id="@+id/idCropImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/broccoli" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BROCCOLI"
+        android:id="@+id/idCropName"
+        android:layout_below="@id/idCropImage"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idCropName">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/idCropImage">
+            <!--        1-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:id="@+id/idRL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4 weeks before seedling"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate1WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading1"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV1weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate1WeekBefore"
+                        android:text="@string/idTV4weeksDesc"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV1Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV1weeksDesc"
+                        android:text="@string/idTV1Expand"
+                        android:textSize="16sp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        2-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3 weeks before seedling"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate2WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading2"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV2weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate2WeekBefore"
+                        android:text="Fertilzation detail"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV2Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV2weeksDesc"
+                        android:text="@string/idTV2Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        3-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2 weeks before seedling"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate3WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading3"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV3weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate3WeekBefore"
+                        android:text="Field Preparation"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV3Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV3weeksDesc"
+                        android:text="@string/idTV3Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        4-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1 weeks before seedling"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate4WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading4"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV4weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate4WeekBefore"
+                        android:text="Plant Protection"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV4Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV4weeksDesc"
+                        android:text="@string/idTV4Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        5-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1 week seedling"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate5WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading5"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV5weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate5WeekBefore"
+                        android:text="Planting"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV5Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV5weeksDesc"
+                        android:text="@string/idTV5Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        6-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 2-10 Vegetative stage"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate6WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading6"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV6weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate6WeekBefore"
+                        android:text="Irrigation"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV6Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV6weeksDesc"
+                        android:text="@string/idTV6Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        7-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 11 Flowering stage"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate7WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading7"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV7weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate7WeekBefore"
+                        android:text="Fertilizer"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV7Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV7weeksDesc"
+                        android:text="@string/idTV7Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        8-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 12-14 Fruiting stage"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate8WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading8"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV8weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate8WeekBefore"
+                        android:text="Monitor field"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV8Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV8weeksDesc"
+                        android:text="@string/idTV8Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        9-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 15-18 Harvesting stage"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate9WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading9"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV9weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate9WeekBefore"
+                        android:text="Harvesting"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV9Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV9weeksDesc"
+                        android:text="@string/idTV9Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        10-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 16 Post-Harvest stage"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate10WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading10"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV10weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate10WeekBefore"
+                        android:text="Conditions"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV10Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV10weeksDesc"
+                        android:text="@string/idTV10Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        11-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 17-18 Resting stage"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate11WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading11"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV11weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate11WeekBefore"
+                        android:text="Left field as it is"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        12-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 19 Post-harvest stage"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate12WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading12"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV12weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate12WeekBefore"
+                        android:text="Field preparation"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/idTV12Expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTV12weeksDesc"
+                        android:text="@string/idTV12Expand"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        13-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/idTVHeading13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Week 20"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/idDate13WeekBefore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idTVHeading13"
+                        android:text="Date"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/idTV13weeksDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/idDate13WeekBefore"
+                        android:text="Thinking about new crop rotation"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="2dp"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bottom_background"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</RelativeLayout>

@@ -62,7 +62,7 @@ public class CropChoose extends AppCompatActivity {
 
         ArrayList<Model> holder=new ArrayList<>();
         Model obj1=new  Model();
-        obj1.setHeader("Bell pepper");
+        obj1.setHeader("Bell Pepper");
         obj1.setImage(R.drawable.bell);
 
         Model obj11=new  Model();

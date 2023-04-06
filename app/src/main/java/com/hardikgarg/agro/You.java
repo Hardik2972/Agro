@@ -38,7 +38,7 @@ public class You extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.home:
-                        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
                         FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
                         String userid1 = user1.getUid();
                         DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference().child("users");
@@ -46,8 +46,59 @@ public class You extends AppCompatActivity {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
-                                if(cropFromDb.equals("Tomato")){
+                                if(cropFromDb.equals("Tomato")) {
                                     startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Bell Pepper")) {
+                                    startActivity(new Intent(getApplicationContext(), BellMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Sugarcane")) {
+                                    startActivity(new Intent(getApplicationContext(), SugarcaneMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Tea")) {
+                                    startActivity(new Intent(getApplicationContext(), TeaMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Coffee")) {
+                                    startActivity(new Intent(getApplicationContext(), CoffeeMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Lavendar")) {
+                                    startActivity(new Intent(getApplicationContext(), LavendarMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Ginger")) {
+                                    startActivity(new Intent(getApplicationContext(), GingerMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Garlic")) {
+                                    startActivity(new Intent(getApplicationContext(), GarlicMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Broccoli")) {
+                                    startActivity(new Intent(getApplicationContext(), BroccoliMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else if(cropFromDb.equals("Sunflower")) {
+                                    startActivity(new Intent(getApplicationContext(), SunflowerMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                                    finish();
+                                }
+                                else{
+                                    startActivity(new Intent(getApplicationContext(), LettuceMainActivity.class));
+                                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                                     finish();
                                 }
                             }
@@ -59,7 +110,7 @@ public class You extends AppCompatActivity {
                         });
                         return true;
                     case R.id.your_crop:
-                        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         String userid = user.getUid();
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("users");
@@ -70,6 +121,7 @@ public class You extends AppCompatActivity {
                                 Intent intent=new Intent(getApplicationContext(),cropDetails.class);
                                 intent.putExtra("state",stateFromDb);
                                 startActivity(intent);
+                                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                                 finish();
                             }
                             @Override

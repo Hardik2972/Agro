@@ -44,9 +44,51 @@ public class LogInActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
-
+                    if(cropFromDb.equals("Tomato")) {
                         startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
                         finish();
+                    }
+                    else if(cropFromDb.equals("Bell Pepper")) {
+                        startActivity(new Intent(getApplicationContext(), BellMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Sugarcane")) {
+                        startActivity(new Intent(getApplicationContext(), SugarcaneMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Tea")) {
+                        startActivity(new Intent(getApplicationContext(), TeaMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Coffee")) {
+                        startActivity(new Intent(getApplicationContext(), CoffeeMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Lavendar")) {
+                        startActivity(new Intent(getApplicationContext(), LavendarMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Ginger")) {
+                        startActivity(new Intent(getApplicationContext(), GingerMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Garlic")) {
+                        startActivity(new Intent(getApplicationContext(), GarlicMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Broccoli")) {
+                        startActivity(new Intent(getApplicationContext(), BroccoliMainActivity.class));
+                        finish();
+                    }
+                    else if(cropFromDb.equals("Sunflower")) {
+                        startActivity(new Intent(getApplicationContext(), SunflowerMainActivity.class));
+                        finish();
+                    }
+                    else{
+                        startActivity(new Intent(getApplicationContext(), LettuceMainActivity.class));
+                        finish();
+                    }
+
                 }
 
                 @Override
@@ -107,11 +149,50 @@ public class LogInActivity extends AppCompatActivity {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                             String cropFromDb=snapshot.child(userid1).child("crop").getValue(String.class);
-
+                                            if(cropFromDb.equals("Tomato")) {
                                                 startActivity(new Intent(getApplicationContext(), TomatoMainActivity.class));
                                                 finish();
-
-
+                                            }
+                                            else if(cropFromDb.equals("Bell Pepper")) {
+                                                startActivity(new Intent(getApplicationContext(), BellMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Sugarcane")) {
+                                                startActivity(new Intent(getApplicationContext(), SugarcaneMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Tea")) {
+                                                startActivity(new Intent(getApplicationContext(), TeaMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Coffee")) {
+                                                startActivity(new Intent(getApplicationContext(), CoffeeMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Lavendar")) {
+                                                startActivity(new Intent(getApplicationContext(), LavendarMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Ginger")) {
+                                                startActivity(new Intent(getApplicationContext(), GingerMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Garlic")) {
+                                                startActivity(new Intent(getApplicationContext(), GarlicMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Broccoli")) {
+                                                startActivity(new Intent(getApplicationContext(), BroccoliMainActivity.class));
+                                                finish();
+                                            }
+                                            else if(cropFromDb.equals("Sunflower")) {
+                                                startActivity(new Intent(getApplicationContext(), SunflowerMainActivity.class));
+                                                finish();
+                                            }
+                                            else{
+                                                startActivity(new Intent(getApplicationContext(), LettuceMainActivity.class));
+                                                finish();
+                                            }
                                         }
 
                                         @Override
